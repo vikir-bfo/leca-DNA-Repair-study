@@ -1,3 +1,12 @@
+"""
+Prunes out-paralogues and in-paralogues from a eukaryotic gene tree, so that each
+tree approximates one LECA orthologous group.
+
+Input   snakemake.input.tree  : Newick gene tree, tips as <prefix>_<species>_<seq id>
+        snakemake.input.guide : species guide, columns 'Name' and 'Group'
+Output  snakemake.output.tree : pruned Newick tree
+
+"""
 from ete4 import PhyloTree
 from pathlib import Path
 from Bio import SeqIO
