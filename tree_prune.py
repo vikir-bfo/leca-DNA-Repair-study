@@ -1,6 +1,8 @@
 """
 tree_prune.py is used to prune the out-paralogs by testing if the branch with the gene is on both sides of the euakroytic root
-Notes and caveats
+Input   snakemake.input.tree  : Newick gene tree, tips as <prefix>_<species>_<seq id>
+        snakemake.input.guide : species guide, columns 'Name' and 'Group'
+Output  snakemake.output.tree : pruned Newick tree
 -----------------
 """
 
