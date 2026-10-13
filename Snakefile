@@ -107,7 +107,7 @@ rule fasttree:
         tree = "iter3/phylotree/{k_num}.nwk"
     threads: 38
     shell:
-q        "FastTreeMP -mlnni 4 -out {output.tree} {input.fasta}"
+q        "FastTreeMP -lg -out {output.tree} {input.fasta}"
 
 rule treeshrink:
     input:
