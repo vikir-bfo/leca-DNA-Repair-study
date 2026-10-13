@@ -2,7 +2,11 @@ from Bio import SeqIO
 import pickle
 from ete4 import PhyloTree
 from pathlib import Path
-""" Script to write fasta files with the tips left in the tree after pruning"""
+""" Script to write fasta files with the tips left in the tree after pruning
+Input   snakemake.input.seq_dict : pickled {tip label: Bio.SeqRecord} dictionary
+        snakemake.input.tree     : pruned Newick tree
+Output  snakemake.output.fasta   : sequences of the retained tips
+"""
 with open(snakemake.input.seq_dict, "rb") as f:
   prot_seq = pickle.load(f)
   
