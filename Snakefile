@@ -1,6 +1,6 @@
 TAXON = glob_wildcards("prot_db/{taxon}.fasta").taxon
 K_NUM = glob_wildcards("iter3/hmm_profile/{k_num}.fasta").k_num
-
+#These were the wildcards that were defined by files outside the snakemake work folder
 wildcard_constraints:
     k_num = r"K\d+",
     taxon = r"[^/]+"
