@@ -1,15 +1,6 @@
 """
 Best_Unique_Hits.py is used to collapse the genome-level HMM hits to one best hit per gene.
 
-Purpose
--------
-Hit tables derived from transcriptome assemblies contain many redundant entries:
-a single gene is represented by several assembled isoforms, and each isoform may
-in turn yield several predicted open reading frames. Treating those as
-independent homologues would inflate copy-number estimates and over-represent
-well-assembled transcriptomes in downstream alignments. This script reduces each
-hit table to one representative hit per gene.
-
 Input
 -----
 Every *.tsv file in the working directory (excluding the output directory),
