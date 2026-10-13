@@ -10,6 +10,10 @@ Best_Unique_Hits.py -- collapses the genome derived hits to a representative per
 
 Unique_HMMs.py -- Reduces the per profile tables to a best hit per protein sequence table
 
+PhyloParse.py -- Prunes the out-paralogues and in-paralogues from a eukaryotic gene tree
+
+PrunedSeq,py -- Writes a FASTA file containing the sequences of the tips left in a tree after pruning
+
 subtree_selection.py -- library that holds all the functions for the gene tree analysis of asgards
 
 subtree_main.upd.py -- the frontend for getting the selected subtreed for a parent tree
@@ -32,4 +36,3 @@ python domain_mapping.py \
     --db      Pfam \
     --outfile 
     
-tree_prune.py -- Removes the out-paralogues and in-paralogues from a eukaryotic gene tree
